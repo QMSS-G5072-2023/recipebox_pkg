@@ -42,25 +42,6 @@ def nutrient_search_recipe(api_key, nutrients):
     
 
 def display_images_nutrient(recipe_df):
-    """
-    Display nutrient information and images for each recipe in a DataFrame.
-
-    Parameters:
-    - recipe_df (pd.DataFrame): DataFrame containing recipe information, including 'title', 'id', 'calories', 'protein', 'fat', 'carbs', and 'image' columns.
-
-    This function iterates over the DataFrame, printing the title, recipe ID, and nutrient information for each row,
-    and then displays the corresponding image.
-
-    Example:
-    >>> df = pd.DataFrame({'title': ['Spaghetti Carbonara', 'Chicken Alfredo'],
-    ...                    'id': [123, 456],
-    ...                    'calories': [500, 700],
-    ...                    'protein': [20, 30],
-    ...                    'fat': [15, 25],
-    ...                    'carbs': [50, 40],
-    ...                    'image': ['https://example.com/spaghetti.jpg', 'https://example.com/chicken.jpg']})
-    >>> display_images_nutrient(df)
-    """
     for _, row in recipe_df.iterrows():
         print(f"Title: {row['title']}")
         print(f"Recipe ID: {row['id']}")

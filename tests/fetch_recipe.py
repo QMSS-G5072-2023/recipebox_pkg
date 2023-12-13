@@ -40,15 +40,6 @@ def search_recipes(api_key, query, r_diet = None, r_excludeIngredients = None, r
         return None
 
 def convert_recipes(response):
-    """
-    Convert recipe information from Spoonacular API response to a styled DataFrame.
-
-    Parameters:
-    - response (dict): The response from the Spoonacular API containing recipe information.
-
-    Returns:
-    - pd.io.formats.style.Styler: A styled DataFrame with selected columns and formatted 'sourceUrl' column.
-    """
     result = response['results']
     df = pd.DataFrame(result)
     df = df.set_index(['id'], inplace=False)  

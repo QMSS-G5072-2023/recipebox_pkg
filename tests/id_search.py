@@ -44,7 +44,7 @@ class Recipe_id:
         return pd.Series(row_data)
 
         
-    def search_ingredient_id(self):
+    def search_ingredient_id(self):  
         """
         Search for ingredient information using the Spoonacular API.
 
@@ -52,25 +52,23 @@ class Recipe_id:
         - pd.DataFrame or None: A DataFrame containing ingredient information or None if an error occurs.
         """
         url = f'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/{self.id}/ingredientWidget.json'
-        params = {'id': self.id
-        } 
+        params = {'id': self.id}
         headers = {
             'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-            'x-rapidapi-key': self.api_key } 
+            'x-rapidapi-key': self.api_key
+        }
         try:
             response = requests.get(url, params=params, headers=headers)
             response.raise_for_status()
-            ingredient= response.json()
+            ingredient = response.json()
             ingredients_df = pd.DataFrame(ingredient)
-            ingredients_df = pd.concat([ingredients_df, ingredients_df ['ingredients'].apply(self.list_reader)], axis=1)
+            ingredients_df = pd.concat([ingredients_df, ingredients_df['ingredients'].apply(self.list_reader)], axis=1)
             ingredients_df = pd.concat([ingredients_df, ingredients_df['amount'].apply(self.dict_reader)], axis=1)
-            ingredients_df= ingredients_df.drop(columns=['image', 'amount', 'ingredients'])
-            return  ingredients_df
+            ingredients_df = ingredients_df.drop(columns=['image', 'amount', 'ingredients'])
+            return ingredients_df
         except Exception as e:
             print(f"An error occurred for ID {self.id}: {e}")
             return None
-        
-        
         
     def search_taste_id(self, recipe_id_list):
         """
@@ -85,13 +83,13 @@ class Recipe_id:
         taste_compare = pd.DataFrame()
         headers = {
                 'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-                'x-rapidapi-key': self.api_key  } 
+                'x-rapidapi-key': self.api_key  }
         for i in recipe_id_list:
             url = f'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/{i}/tasteWidget.json'
 
-            params = {'id': i,      
+            params = {'id': i,
                       'normalize': 'False'
-                         }    
+                         }
 
             try:
                 response = requests.get(url, params=params, headers=headers)
