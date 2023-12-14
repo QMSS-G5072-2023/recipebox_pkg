@@ -38,11 +38,11 @@ recipes_retrieved = fetch_recipe.convert_recipes(recipes)
 This package requires the following Python libraries:
 - Pandas
 - Requests
-- IPython
+
 To install these libraries, run:
 
 ```bash
-pip install pandas requests IPython
+pip install pandas requests
 ```
 ## Contributing
 
@@ -59,5 +59,6 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 ## Links
 
 [Documentation](file:///Users/anyuchen/Desktop/recipebox_pkg/docs/_build/html/index.html)
+
 [Recipe-Food-Nutrition API Documentation](https://spoonacular.com/food-api/docs)
 

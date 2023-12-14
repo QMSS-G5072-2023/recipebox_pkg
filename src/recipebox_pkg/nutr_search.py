@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 import os
 import json
-
+from IPython.display import display, Image
 
 
 def nutrient_search_recipe(api_key, nutrients):

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "recipebox_pkg"
-version = "0.1.0"
+version = "2.1.1"
 description = "A Python package designed for fetching information about recipes."
 authors = ["Yuchen An"]
 license = "MIT"
@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.31.0"
-IPython = "^7.28.0"
+pandas = "^1.4.2"
 
 [tool.poetry.dev-dependencies]
 

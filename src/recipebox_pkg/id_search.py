@@ -166,7 +166,7 @@ class Recipe_id:
             response.raise_for_status()
             equipment = response.json()
             equip_df = pd.DataFrame(equipment)
-            equip_df = pd.concat([equip_df, equip_df ['equipment'].apply(list_reader)], axis=1)
+            equip_df = pd.concat([equip_df, equip_df ['equipment'].apply(self.list_reader)], axis=1)
             equip_df= equip_df.drop(columns=['equipment','image'])
 
         except Exception as e:
