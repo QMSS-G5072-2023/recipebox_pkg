@@ -13,11 +13,3 @@ build:
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
   configuration: docs/conf.py
-
-# Configuration
-python:
-  version: 3.9
-  install:
-    - requirements: docs/requirements.txt
-    - method: pip
-      path: .
