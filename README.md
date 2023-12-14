@@ -17,7 +17,7 @@ $ pip install recipebox_pkg
 
 - **Visualize the Dish:** View images showcasing the appearance of the prepared dish.
 
-## Usage
+## Example
 
 ```python
 # Import the necessary function from recipebox_pkg
