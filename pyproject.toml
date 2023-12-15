@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "recipebox_pkg"
-version = "2.1.1"
+version = "2.2.2"
 description = "A Python package designed for fetching information about recipes."
 authors = ["Yuchen An"]
 license = "MIT"

@@ -101,7 +101,9 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## Links
 
-[Documentation](file:///Users/anyuchen/Desktop/recipebox_pkg/docs/_build/html/index.html)
+[Documentation](https://recipebox-pkg.readthedocs.io/en/latest/)
 
 [Recipe-Food-Nutrition API Documentation](https://spoonacular.com/food-api/docs)
+
+[TestPyPI](https://test.pypi.org/project/recipebox_pkg/)
 
