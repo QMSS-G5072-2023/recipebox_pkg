@@ -19,6 +19,8 @@ $ pip install recipebox_pkg
 
 ## Usage
 
+- Retrieve an API Key from RapidAPI 
+
 ```python
 # Import the necessary function from recipebox_pkg
 from recipebox_pkg import (fetch_recipe, id_search, ing_search, nutr_search)
